@@ -1,28 +1,26 @@
-// Assignment Code
-
 // Initializing all variables 
 var generateBtn = document.querySelector("#generate");
 var lowercaseCharacter = "abcdefghijklmnopqrstuvwxyz";
 var uppercaseCharacter = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var numberCharacter = "0123456789";
 var specialCharacter = "!@#$%^&*()_-+={}[];:'`~<,>.?/|"
-var pwdLegnth;
+var pwdLength;
 var uppercasePwdCheck;
 var numberPwdCheck;
 var specialPwdCheck;
 
 //Function used to determine the length of the password
 function determineLength(){
-    pwdLegnth = prompt("Choose how long your password needs to be (should be between 8 -128 characters) ");
+    pwdLength = prompt("Choose how long your password needs to be (should be between 8 -128 characters) ");
 
-    if (pwdLegnth < 8 || pwdLegnth > 128) {
+    if (pwdLength < 8 || pwdLength > 128) {
         alert("Password length must be a number between 8-128 characters");
         determineLength();
-    } else if (isNaN(pwdLegnth)) {
+    } else if (isNaN(pwdLength)) {
         alert("Password length must be a number between 8-128 characters");
         determineLength();
     }
-    return pwdLegnth;
+    return pwdLength;
 }
 
 //Function used to see if the user wants to include uppercase characters in the password
@@ -100,7 +98,7 @@ function isSpecial(){
  //Function used to take all the input from the previous functions and generate a password using a random number generator 
     function generatePassword(){
         determineLength();
-        console.log(pwdLegnth);
+        console.log(pwdLength);
         isUppercase();
         console.log(uppercasePwdCheck);
         isNumbers();
@@ -135,7 +133,7 @@ function isSpecial(){
     characters === lowercaseCharacter;
     }
 
-  for(var i = 0; i < pwdLegnth; i++){
+  for(var i = 0; i < pwdLength; i++){
     password += characters.charAt(Math.floor(Math.random() * characters.length));
   }
   return password;
