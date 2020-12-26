@@ -41,3 +41,6 @@ Prompt the user if they want to include special characters Yes or NO
 After recieving all the information from users, use to the random function to choose an uppercase letter and lower case letter. Also randomly choose a special character and number from the string initialized from the variable at the top of page.
 Lastly, print out the password generated in the container for the user 
 
+Deployment Link: https://jarora16.github.io/Homework-3---Password-Generator/
+
+
